@@ -10,7 +10,7 @@ Function RepSymb(ByVal line_ As String, Optional dic_ As Variant, Optional check
         objRegExp.Pattern = "[" & dic_ & "]*"
         ResultLine = objRegExp.Replace(line_, "")
     Else
-        objRegExp.Pattern = "[^a-zA-Z0-9" & DecSec & "]*"
+        objRegExp.Pattern = "[^a-zA-Z0-9а-яА-Я" & DecSec & "]*"
         ResultLine = objRegExp.Replace(line_, "")
     End If
     If (CheckDoubles) Then
