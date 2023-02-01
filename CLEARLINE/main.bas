@@ -1,5 +1,6 @@
-Attribute VB_Name = "CLEARLINE"
+'Attribute VB_Name = "CLEARLINE"
 'https://github.com/surqov
+'https://excelium.ru/
 
 Private Function RepSymb(ByVal line_ As String, Optional dic_ As Variant, Optional check_doubles As Boolean) As String
     Dim IsDict As Boolean, CheckDoubles As Boolean, ResultLine As String
@@ -23,10 +24,10 @@ Private Function RepSymb(ByVal line_ As String, Optional dic_ As Variant, Option
         Dim EscapedDic As String
         objRegExp.Pattern = "[-/\\^$*+?()|[\]{}]"
         EscapedDic = objRegExp.Replace(CStr(dic_), "\$&")
-        objRegExp.Pattern = "[^a-zA-Z0-9–∞-—è–ê-–Ø" & EscapedDic & "]*"
+        objRegExp.Pattern = "[^a-zA-Z0-9¡-—·-Ò" & EscapedDic & "]*"
     Else
     'Using standart symbols ranges if there no dictonary got from user
-        objRegExp.Pattern = "[^a-zA-Z0-9–∞-—è–ê-–Ø]*"
+        objRegExp.Pattern = "[^a-zA-Z0-9¡-—·-Ò]*"
     End If
     
     'Implementing RegExp
@@ -61,6 +62,6 @@ Public Function CLEARLINE(ByVal Rng As Range, Optional dic_ As Variant, Optional
     End If
 End Function
 
-Public Function –£–ë–†–õ–ò–®–ù(ByVal Rng As Range, Optional dic_ As Variant, Optional check_doubles As Boolean) As Variant
-    –£–ë–†–õ–ò–®–ù = CLEARLINE(Rng, dic_, check_doubles)
+Public Function ı‚ÚÏÈ˚Ó(ByVal Rng As Range, Optional dic_ As Variant, Optional check_doubles As Boolean) As Variant
+    ı‚ÚÏÈ˚Ó = CLEARLINE(Rng, dic_, check_doubles)
 End Function
