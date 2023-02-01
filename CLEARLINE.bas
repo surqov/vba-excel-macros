@@ -1,6 +1,6 @@
-﻿''Attribute VB_Name = "CLEARLINE"
-''https://github.com/surqov
-''https://excelium.ru/
+﻿'Attribute VB_Name = "CLEARLINE"
+'https://github.com/surqov
+'https://excelium.ru/
 
 Private Function RepSymb(ByVal line_ As String, Optional dic_ As Variant, Optional check_doubles As Boolean) As String
     Dim IsDict As Boolean, CheckDoubles As Boolean, ResultLine As String
