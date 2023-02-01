@@ -1,4 +1,4 @@
-'Attribute VB_Name = "CLEARLINE"
+''Attribute VB_Name = "CLEARLINE"
 'https://github.com/surqov
 'https://excelium.ru/
 
